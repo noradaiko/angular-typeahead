@@ -28,6 +28,10 @@ angular.module('typeahead.directives', []).directive('ngTypeahead', function ($p
                 }
             };
 
+            if (attrs.jsonp) {
+                construct.dataType = 'jsonp';
+            }
+
             if (attrs.limit) {
                 construct.limit = attrs.limit;
             }
